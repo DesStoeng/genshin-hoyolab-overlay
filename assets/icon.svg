@@ -1,0 +1,150 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Drop shadow for the icon button -->
+    <filter id="btnShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0d120a" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Drop shadow for the central map pin -->
+    <filter id="pinShadow" x="-25%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#151c12" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Drop shadow for the small diamond -->
+    <filter id="diamondShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#151c12" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Clip path to keep map contents strictly inside the inner terrain squircle -->
+    <clipPath id="terrainClip">
+      <rect x="42" y="42" width="428" height="428" rx="88" ry="88" />
+    </clipPath>
+
+    <!-- Color Gradients for authentic Genshin Impact look -->
+    <linearGradient id="rimGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbdda4" />
+      <stop offset="50%" stop-color="#bdd095" />
+      <stop offset="100%" stop-color="#a4b97f" />
+    </linearGradient>
+
+    <linearGradient id="terrainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a8957" />
+      <stop offset="50%" stop-color="#71804f" />
+      <stop offset="100%" stop-color="#647144" />
+    </linearGradient>
+
+    <linearGradient id="waterGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#46a8b7" />
+      <stop offset="100%" stop-color="#328896" />
+    </linearGradient>
+
+    <linearGradient id="pinBodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#faf8ef" />
+      <stop offset="100%" stop-color="#ece6d5" />
+    </linearGradient>
+
+    <linearGradient id="cyanTeleport" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bf3ff" />
+      <stop offset="100%" stop-color="#36c9dd" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Outermost Dark Frame with Drop Shadow -->
+  <rect x="20" y="20" width="472" height="472" rx="104" ry="104" fill="#20271c" filter="url(#btnShadow)" />
+
+  <!-- 2. Sage / Light Olive Rim -->
+  <rect x="28" y="28" width="456" height="456" rx="96" ry="96" fill="url(#rimGrad)" />
+
+  <!-- 3. Inner Dark Border around terrain -->
+  <rect x="39" y="39" width="434" height="434" rx="91" ry="91" fill="#20271c" />
+
+  <!-- 4. Inner Map Content (Clipped to Terrain Shape) -->
+  <g clip-path="url(#terrainClip)">
+    <!-- Base Green Terrain Background -->
+    <rect x="42" y="42" width="428" height="428" fill="url(#terrainGrad)" />
+
+    <!-- Top-Right Lake / Water Body -->
+    <path d="M 302 30
+             C 314 85, 308 116, 344 142
+             C 378 166, 424 174, 434 206
+             C 440 228, 458 234, 498 238
+             L 498 30 Z"
+          fill="url(#waterGrad)"
+          stroke="#20271c"
+          stroke-width="14"
+          stroke-linejoin="round" />
+
+    <!-- Winding Path (Road) -->
+    <path d="M 112 425
+             C 172 380, 206 342, 264 300
+             C 304 270, 338 280, 364 308
+             C 394 338, 430 322, 474 290"
+          fill="none"
+          stroke="#20271c"
+          stroke-width="32"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+    <path d="M 112 425
+             C 172 380, 206 342, 264 300
+             C 304 270, 338 280, 364 308
+             C 394 338, 430 322, 474 290"
+          fill="none"
+          stroke="#f4edc2"
+          stroke-width="20"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+
+    <!-- Small Waypoint Diamond (Bottom Right, under path) -->
+    <g transform="translate(324, 376) rotate(45)" filter="url(#diamondShadow)">
+      <rect x="-26" y="-26" width="52" height="52" rx="7" ry="7" fill="#20271c" />
+      <rect x="-20" y="-20" width="40" height="40" rx="4" ry="4" fill="#faf8ef" />
+      <rect x="-13" y="-13" width="26" height="26" rx="2.5" ry="2.5" fill="#20271c" />
+      <rect x="-5.5" y="-5.5" width="11" height="11" rx="1.5" ry="1.5" fill="#faf8ef" />
+    </g>
+
+    <!-- Main Map Pin (Center-Left) with Drop Shadow -->
+    <g filter="url(#pinShadow)">
+      <!-- Pin Dark Outer Silhouette -->
+      <path d="M 190 78
+               C 193 83, 197 91, 202 93
+               C 246 103, 278 141, 278 186
+               C 278 223, 248 266, 190 328
+               C 132 266, 102 223, 102 186
+               C 102 141, 134 103, 178 93
+               C 183 91, 187 83, 190 78 Z"
+            fill="#20271c" />
+
+      <!-- Pin White Body Fill -->
+      <path d="M 190 89
+               C 193 93, 196 99, 200 101
+               C 239 110, 267 144, 267 186
+               C 267 219, 239 258, 190 314
+               C 141 258, 113 219, 113 186
+               C 113 144, 141 110, 180 101
+               C 184 99, 187 93, 190 89 Z"
+            fill="url(#pinBodyGrad)" />
+
+      <!-- Dark Horseshoe Arch / Window inside pin -->
+      <path d="M 190 128
+               C 216 128, 234 148, 234 174
+               L 234 206
+               L 190 248
+               L 146 206
+               L 146 174
+               C 146 148, 164 128, 190 128 Z"
+            fill="#20271c" />
+
+      <!-- Glowing Cyan Waypoint inside Arch -->
+      <path d="M 190 148
+               L 218 193
+               L 205 196
+               L 190 170
+               L 175 196
+               L 162 193 Z"
+            fill="url(#cyanTeleport)" />
+      <polygon points="190,164 205,187 190,210 175,187" fill="url(#cyanTeleport)" />
+      <polygon points="190,170 200,187 190,204 180,187" fill="#ffffff" opacity="0.9" />
+    </g>
+  </g>
+</svg>

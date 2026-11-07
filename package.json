@@ -1,0 +1,34 @@
+{
+  "name": "genshin-hoyolab-overlay",
+  "productName": "Genshin HoYoLAB Overlay",
+  "version": "1.0.0",
+  "author": "Tawan",
+  "description": "Lightweight GPU-accelerated in-game HoYoLAB Interactive Map Overlay for Genshin Impact",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --dir",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.tawan.genshinhoyolaboverlay",
+    "productName": "Genshin HoYoLAB Overlay",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "dir",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
