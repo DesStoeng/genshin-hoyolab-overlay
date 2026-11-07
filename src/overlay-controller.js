@@ -50,13 +50,27 @@ const CLEAN_OVERLAY_CSS = `
     display: none !important;
   }
 
-  /* Modals & Dialogs (เช่น Guide for Viewing Entrances, Layer Exploration, Correct Pin) ให้แสดงผลได้อย่างถูกต้อง คมชัด และปิดได้ */
+  /* ป้องกัน Modal เปล่าๆ, Overlay แถบเงา, และ Tutorial ไม่ให้มาขวางการคลิกหรือลากเลื่อนแผนที่ */
   .gt-modal,
   .gt-popup-root,
-  .correct-modal {
+  .gt-modal[data-modal-visible-count="0"],
+  .gt-popup-root[data-modal-visible-count="0"],
+  .driver-overlay,
+  #gt-driver-overlay-path,
+  .driver-popover {
+    pointer-events: none !important;
+  }
+
+  /* ให้แผนที่ Leaflet รับการคลิกและลากเลื่อน (Pan / Drag / Zoom) ได้ 100% ตลอดเวลา */
+  .leaflet-container,
+  .mhy-map-container,
+  .mhy-game-gis,
+  .mhy-map {
     pointer-events: auto !important;
   }
 
+  /* เฉพาะเมื่อมีเนื้อหากล่อง Modal (เช่น ดูทางเข้าถ้ำ หรือ Layer Exploration) ถึงจะรับการคลิก */
+  .gt-modal:not([data-modal-visible-count="0"]) .gt-modal__content,
   .gt-modal .gt-modal__content,
   .correct-modal,
   .viewing-entrances-dialog,
@@ -66,9 +80,8 @@ const CLEAN_OVERLAY_CSS = `
     pointer-events: auto !important;
   }
 
-  /* ให้พื้นหลัง Mask ของ Modal มืดลงเล็กน้อยเพื่อให้เห็น Dialog ชัดเจน และคลิกปิดได้ */
-  .gt-popup-layout__mask,
-  .gt-modal__mask {
+  /* ให้พื้นหลัง Mask ของ Modal มืดลงเล็กน้อยเฉพาะเวลาเปิด Modal จริง */
+  .gt-modal:not([data-modal-visible-count="0"]) .gt-modal__mask {
     background: rgba(0, 0, 0, 0.5) !important;
     backdrop-filter: blur(2px) !important;
     pointer-events: auto !important;
