@@ -1,6 +1,7 @@
 # Genshin HoYoLAB Official Map Overlay (Ultra Lightweight & High Performance)
 
 [![Release](https://img.shields.io/github/v/release/DesStoeng/genshin-hoyolab-overlay?style=for-the-badge&color=2563eb)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/SKjZYumAUu)
 [![Support on Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/pecpakin)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue?style=for-the-badge)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
 
@@ -50,6 +51,17 @@ Engineered for **maximum smoothness, ultra-low resource usage (CPU Idle ~0%)**, 
 4. **In-game usage**:
    - Press **`F9`** whenever you want to mark pins or interact with the map, and press **`F9`** again to play the game normally.
    - Press **`F7`** to quickly hide/show the overlay at any time.
+
+---
+
+## 💬 Community & Support
+
+Need help, want to report a bug, or suggest a new feature? Join our Discord community:
+
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/SKjZYumAUu)
+
+- 💬 **Discord Server:** [https://discord.gg/SKjZYumAUu](https://discord.gg/SKjZYumAUu)
+- 🐛 **Bug Reports & Issues:** [GitHub Issues](https://github.com/DesStoeng/genshin-hoyolab-overlay/issues)
 
 ---
 
