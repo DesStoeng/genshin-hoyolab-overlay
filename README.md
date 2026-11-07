@@ -1,5 +1,9 @@
 # Genshin HoYoLAB Official Map Overlay (Ultra Lightweight & High Performance)
 
+[![Release](https://img.shields.io/github/v/release/DesStoeng/genshin-hoyolab-overlay?style=for-the-badge&color=2563eb)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
+[![Support on Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/pecpakin)
+[![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue?style=for-the-badge)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
+
 An in-game **HoYoLAB Interactive Map Overlay** for Genshin Impact.
 Engineered for **maximum smoothness, ultra-low resource usage (CPU Idle ~0%)**, and instant Cloud Sync with your official HoYoverse account.
 
@@ -38,10 +42,21 @@ Engineered for **maximum smoothness, ultra-low resource usage (CPU Idle ~0%)**, 
 
 ## 🚀 How to Launch
 
-1. Double-click the desktop shortcut **`Genshin HoYoLAB Overlay`** (or `Start-Overlay.vbs` / `Start-Overlay.bat`).
-2. **First-time Login**:
+1. Download the latest pre-built zip from [Releases](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases).
+2. Extract the zip file and run `Genshin HoYoLAB Overlay.exe`.
+3. **First-time Login**:
    - Press **`F8`** to switch to Setup Mode, then click the login avatar at the top right to log into your HoYoverse account.
    - Press **`F8`** again to return to Overlay Mode.
-3. **In-game usage**:
+4. **In-game usage**:
    - Press **`F9`** whenever you want to mark pins or interact with the map, and press **`F9`** again to play the game normally.
    - Press **`F7`** to quickly hide/show the overlay at any time.
+
+---
+
+## 💖 Support the Project
+
+If you find this overlay helpful and it makes your exploration in Teyvat smoother, consider supporting the project! Every cup of coffee is greatly appreciated and motivates further development:
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/pecpakin)
+
+You can support directly at: [https://ko-fi.com/pecpakin](https://ko-fi.com/pecpakin)
