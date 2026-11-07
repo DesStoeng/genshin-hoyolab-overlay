@@ -10,7 +10,6 @@ const hotkeyHelper = require('./hotkey-helper');
 // ตั้งค่า Chromium Switches เพื่อเปิดใช้ GPU Hardware Acceleration เต็มประสิทธิภาพและลื่นไหล
 app.commandLine.appendSwitch('high-dpi-support', '1');
 app.commandLine.appendSwitch('enable-gpu-rasterization');
-app.commandLine.appendSwitch('enable-zero-copy');
 app.commandLine.appendSwitch('ignore-gpu-blocklist');
 
 const LOG_FILE = path.join(__dirname, '..', 'overlay.log');
@@ -193,6 +192,21 @@ function createHoyoWindow(overlayMode = true) {
       };
 
   hoyoWin = new BrowserWindow(windowOptions);
+
+  hoyoWin.webContents.setWindowOpenHandler(({ url }) => {
+    if (url && url.startsWith('http')) {
+      require('electron').shell.openExternal(url);
+    }
+    return { action: 'deny' };
+  });
+
+  hoyoWin.webContents.on('render-process-gone', (e, details) => {
+    logOverlay(`[Process] Render process gone: ${JSON.stringify(details)}`);
+  });
+
+  hoyoWin.webContents.on('unresponsive', () => {
+    logOverlay('[Process] Window became unresponsive');
+  });
 
   if (overlayMode) {
     hoyoWin.setAlwaysOnTop(true, 'screen-saver', 1);

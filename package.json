@@ -24,7 +24,8 @@
     ],
     "win": {
       "target": "dir",
-      "icon": "assets/icon.ico"
+      "icon": "assets/icon.ico",
+      "signAndEditExecutable": false
     }
   },
   "devDependencies": {

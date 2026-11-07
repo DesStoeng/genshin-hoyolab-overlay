@@ -35,7 +35,6 @@ const CLEAN_OVERLAY_CSS = `
   .download-dialog,
   .user-guide,
   .mhy-hoyolab-app-header,
-  .gt-popup-layout__mask,
   .map-notice-bar,
   .bbs-qr,
   .bbs-qr__inner,
@@ -43,16 +42,42 @@ const CLEAN_OVERLAY_CSS = `
   .bbs-qr__en-us,
   [class*="bbs-qr"],
   .mihoyo-cookie-tips,
-  .map-loading-mask,
-  .map-loading-mists,
-  .map-loading,
   .strong-tip-closable,
   .guide-mask,
   .driver-overlay,
   #gt-driver-overlay-path,
-  .driver-popover,
-  .gt-modal {
+  .driver-popover {
     display: none !important;
+  }
+
+  /* Modals & Dialogs (เช่น Guide for Viewing Entrances, Layer Exploration, Correct Pin) ให้แสดงผลได้อย่างถูกต้อง คมชัด และปิดได้ */
+  .gt-modal,
+  .gt-popup-root,
+  .correct-modal {
+    pointer-events: auto !important;
+  }
+
+  .gt-modal .gt-modal__content,
+  .correct-modal,
+  .viewing-entrances-dialog,
+  .layer-exploration-dialog {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85) !important;
+    border-radius: 12px !important;
+    pointer-events: auto !important;
+  }
+
+  /* ให้พื้นหลัง Mask ของ Modal มืดลงเล็กน้อยเพื่อให้เห็น Dialog ชัดเจน และคลิกปิดได้ */
+  .gt-popup-layout__mask,
+  .gt-modal__mask {
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(2px) !important;
+    pointer-events: auto !important;
+  }
+
+  /* Loading Mask สำหรับสลับชั้นแผนที่ ให้โปร่งใส ไม่บดบัง และไม่ทำให้ระบบค้าง */
+  .map-loading-mask {
+    background: transparent !important;
+    pointer-events: none !important;
   }
 
   /* 3. กรองพื้นหลังสีดำ/น้ำเงินเข้ม (#121921) ของทะเลและช่องว่างนอกขอบเขตแผนที่ออกให้โปร่งใส 100% ทะลุเห็นตัวเกม */
@@ -149,7 +174,7 @@ const SCRIPT_OVERLAY_HELPER = `
         localStorage.setItem('user_guide_finish', 'true');
         localStorage.setItem('has_shown_guide', 'true');
       } catch {}
-      document.querySelectorAll('.driver-overlay, #gt-driver-overlay-path, .driver-popover, .map-loading-mask').forEach(el => el.remove());
+      document.querySelectorAll('.driver-overlay, #gt-driver-overlay-path, .driver-popover').forEach(el => el.remove());
       document.body.classList.remove('driver-active', 'driver-fade');
     }
     dismissDriverTutorial();
