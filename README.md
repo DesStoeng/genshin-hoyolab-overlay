@@ -1,104 +1,107 @@
-# Genshin HoYoLAB Official Map Overlay (Ultra Lightweight & High Performance)
+# Genshin HoYoLAB In-Game Map Overlay
 
 [![Release](https://img.shields.io/github/v/release/DesStoeng/genshin-hoyolab-overlay?style=for-the-badge&color=2563eb)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/SKjZYumAUu)
 [![Support on Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/pecpakin)
 [![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue?style=for-the-badge)](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases)
 
-An in-game **HoYoLAB Interactive Map Overlay** for Genshin Impact.
-Engineered for **maximum smoothness, ultra-low resource usage (CPU Idle ~0%)**, and instant Cloud Sync with your official HoYoverse account.
+A transparent, lightweight in-game overlay for the official HoYoLAB interactive map. Built so you can track chests, Oculi, and quest routes directly on top of Genshin Impact without needing a second monitor or constantly Alt-Tabbing.
 
 ---
 
-## 📸 Showcase & Screenshots
+## 📸 Screenshots
 
-### 🎮 Seamless In-Game Overlay
-Play Genshin Impact with the interactive map floating directly over your gameplay. The custom GPU filter removes dark ocean backgrounds and empty voids, leaving only landmasses, routes, and interactive pins visible over your game.
+### 🎮 In-Game Map Overlay
+The map floats directly over your game with the dark ocean background filtered out, so your game stays clearly visible underneath.
 
 ![In-Game Overlay](assets/screenshots/overlay-ingame.jpg)
 
 ---
 
-### 🗺️ Multi-Layer & Underground Exploration
-Explore subterranean areas, caves, and multi-tier domains seamlessly. Full support for HoYoLAB's layer switching (Surface, B1, B2, etc.), pin elevation indicators, and entrance guides.
+### 🗺️ Underground & Cave Navigation
+Full support for multi-layer maps (Surface, B1, B2) and entrance guides. Never get lost in subterranean caves again.
 
 ![Multi-Layer Exploration](assets/screenshots/layer-exploration.jpg)
 
 ---
 
 ### ☁️ Official Account & Real-Time Cloud Sync
-Log in directly to your official HoYoverse account and select your server/character. All marked pins, collected Oculi, and opened chests synchronize automatically with your official HoYoLAB cloud data.
+Log in directly with your official HoYoverse account. Select your server and character, and all your marked pins sync automatically in real time.
 
 ![Official Account & Cloud Sync](assets/screenshots/account-sync.jpg)
 
 ---
 
-### ⚙️ Windowed Setup Mode (`F8`)
-Switch to Setup Mode at any time with a single keypress for initial login, filter configuration, or standard desktop map browsing.
+### ⚙️ Setup Mode (`F8`)
+Press F8 anytime to switch into windowed mode for easy first-time login, adjusting filters, or standard map browsing.
 
 ![Setup Mode](assets/screenshots/setup-mode.jpg)
 
 ---
 
-## 🌟 Key Features
+## ✨ Features
 
-1. **Ultra Low Resource & High Performance (60+ FPS)**:
-   - Zero background image recognition / screen capture overhead. Pure GPU-accelerated Leaflet map overlay.
-   - Smooth and lag-free gameplay with minimal CPU and RAM usage.
-2. **Official Account Cloud Sync**:
-   - Runs the official HoYoLAB Interactive Map in an isolated Chromium session.
-   - Marked pins, chests, and Oculi are saved directly to your HoYoverse cloud account.
-3. **Black Void / Ocean Removal**:
-   - Built-in GPU chromaluma filter removes the dark ocean and out-of-bounds background (`#121921`), leaving only the terrain, islands, pins, and roads floating over your game.
-4. **Persistent Login**:
-   - Log in once in Setup Mode (F8) and your session will persist permanently.
-5. **Mouse Click-Through (F9)**:
-   - Toggle seamlessly between **Interactive Pin Mode** (clicking/marking map pins) and **Game Click-Through** (full mouse control for playing the game).
-6. **Smart Hotkey Helper (Admin Bridge)**:
-   - Global hotkeys (F6, F7, F8, F9, F10) work flawlessly even when Genshin Impact is running with Administrator privileges.
+- **No Alt-Tab Needed**: The official HoYoLAB map stays right on your screen while playing.
+- **Dark Ocean Background Removed**: Automatically cuts out the dark water textures and empty voids, leaving only landmasses, roads, and pins floating over the game.
+- **Direct HoYoLAB Cloud Sync**: Uses the real HoYoLAB map — everything you mark or sync saves straight to your official HoYoverse account.
+- **One-Key Mouse Toggle (`F9`)**: Hit F9 to click and mark pins, hit F9 again to immediately return mouse control back to Genshin.
+- **Adjustable Opacity (`F10`)**: Cycle through transparency levels, including a "Pins Only" mode where the map terrain disappears completely and only pins hover over your game.
+- **Lightweight & Smooth**: Runs quietly in the background with near-zero idle CPU usage and no impact on in-game FPS.
+- **Works with Admin Privileges**: Hotkeys respond properly even when Genshin Impact is running with Administrator rights.
 
 ---
 
 ## ⌨️ Hotkeys
 
-| Hotkey | Description |
+| Key | What it does |
 | :--- | :--- |
-| **`F7`** | **Toggle Show / Hide Overlay** immediately |
-| **`F9`** | **Toggle Mouse Mode:** Interactive Map Marking $\leftrightarrow$ Click-through into Game |
-| **`F10`** | **Cycle Map Opacity:** 0% (Pins only) $\rightarrow$ 25% $\rightarrow$ 50% $\rightarrow$ 75% $\rightarrow$ 100% (Crisp terrain with dark background removed) |
-| **`F6`** | **Pin / Auto-collapse Left Filter Panel** |
-| **`F8`** | **Switch Mode:** In-Game Overlay $\leftrightarrow$ Setup & Account Login Mode |
+| **`F9`** | **Toggle Mouse Mode:** Switch between interacting with the map $\leftrightarrow$ returning mouse to the game |
+| **`F7`** | **Show / Hide:** Instantly show or hide the overlay |
+| **`F10`** | **Cycle Opacity:** 0% (Pins only) $\rightarrow$ 25% $\rightarrow$ 50% $\rightarrow$ 75% $\rightarrow$ 100% |
+| **`F8`** | **Setup Mode:** Switch between transparent overlay and standard windowed mode |
+| **`F6`** | **Toggle Sidebar:** Collapse or expand the left filter panel |
 
 ---
 
-## 🚀 How to Launch
+## 🚀 Quick Start
 
-1. Download the latest pre-built zip from [Releases](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases).
-2. Extract the zip file and run `Genshin HoYoLAB Overlay.exe`.
+1. Download the latest `.zip` from [Releases](https://github.com/DesStoeng/genshin-hoyolab-overlay/releases).
+2. Extract the folder anywhere on your PC and run `Genshin HoYoLAB Overlay.exe`.
 3. **First-time Login**:
-   - Press **`F8`** to switch to Setup Mode, then click the login avatar at the top right to log into your HoYoverse account.
-   - Press **`F8`** again to return to Overlay Mode.
-4. **In-game usage**:
-   - Press **`F9`** whenever you want to mark pins or interact with the map, and press **`F9`** again to play the game normally.
-   - Press **`F7`** to quickly hide/show the overlay at any time.
+   - Press **`F8`** to open Setup Mode.
+   - Log into your HoYoverse account and pick your server/character so cloud sync activates.
+   - Press **`F8`** to return to Overlay Mode.
+4. **Playing the Game**:
+   - Set Genshin Impact to **Borderless** or **Windowed** mode.
+   - Press **`F9`** whenever you want to mark pins or move the map.
+   - Press **`F9`** again to jump right back into gameplay.
+   - Press **`F7`** anytime to hide the overlay.
 
 ---
 
-## 💬 Community & Support
+## ❓ FAQ
 
-Need help, want to report a bug, or suggest a new feature? Join our Discord community:
+**Q: Is this safe? Will I get banned?**  
+**A:** Yes, it is safe. This overlay does **not** inject code, hook game processes, modify game files, or read game memory. It is simply a transparent web window running on Windows that floats over your screen, similar to Discord or OBS overlays.
+
+**Q: Do my marked pins save to my account?**  
+**A:** Yes! The overlay runs the official HoYoLAB map inside. As long as you log into your HoYoverse account in Setup Mode (`F8`), all marked pins sync with your cloud account across all devices.
+
+---
+
+## 💬 Community & Feedback
+
+Have questions, suggestions, or found a bug? Come chat with us:
 
 [![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/SKjZYumAUu)
 
-- 💬 **Discord Server:** [https://discord.gg/SKjZYumAUu](https://discord.gg/SKjZYumAUu)
-- 🐛 **Bug Reports & Issues:** [GitHub Issues](https://github.com/DesStoeng/genshin-hoyolab-overlay/issues)
+- 💬 **Discord:** [https://discord.gg/SKjZYumAUu](https://discord.gg/SKjZYumAUu)
+- 🐛 **Issue Tracker:** [GitHub Issues](https://github.com/DesStoeng/genshin-hoyolab-overlay/issues)
 
 ---
 
-## 💖 Support the Project
+## 💖 Support
 
-If you find this overlay helpful and it makes your exploration in Teyvat smoother, consider supporting the project! Every cup of coffee is greatly appreciated and motivates further development:
+If this tool made exploring Teyvat and finding chests a little easier for you, feel free to support the project! Every coffee helps keep updates coming:
 
-[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/pecpakin)
-
-You can support directly at: [https://ko-fi.com/pecpakin](https://ko-fi.com/pecpakin)
+[![Support on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/pecpakin)
