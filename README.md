@@ -10,6 +10,36 @@ Engineered for **maximum smoothness, ultra-low resource usage (CPU Idle ~0%)**, 
 
 ---
 
+## 📸 Showcase & Screenshots
+
+### 🎮 Seamless In-Game Overlay
+Play Genshin Impact with the interactive map floating directly over your gameplay. The custom GPU filter removes dark ocean backgrounds and empty voids, leaving only landmasses, routes, and interactive pins visible over your game.
+
+![In-Game Overlay](assets/screenshots/overlay-ingame.jpg)
+
+---
+
+### 🗺️ Multi-Layer & Underground Exploration
+Explore subterranean areas, caves, and multi-tier domains seamlessly. Full support for HoYoLAB's layer switching (Surface, B1, B2, etc.), pin elevation indicators, and entrance guides.
+
+![Multi-Layer Exploration](assets/screenshots/layer-exploration.jpg)
+
+---
+
+### ☁️ Official Account & Real-Time Cloud Sync
+Log in directly to your official HoYoverse account and select your server/character. All marked pins, collected Oculi, and opened chests synchronize automatically with your official HoYoLAB cloud data.
+
+![Official Account & Cloud Sync](assets/screenshots/account-sync.jpg)
+
+---
+
+### ⚙️ Windowed Setup Mode (`F8`)
+Switch to Setup Mode at any time with a single keypress for initial login, filter configuration, or standard desktop map browsing.
+
+![Setup Mode](assets/screenshots/setup-mode.jpg)
+
+---
+
 ## 🌟 Key Features
 
 1. **Ultra Low Resource & High Performance (60+ FPS)**:
